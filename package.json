@@ -1,0 +1,19 @@
+{
+  "name": "weneeacan.github.io",
+  "version": "1.0.0",
+  "description": "an image web",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/weneeacan/weneeacan.github.io"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.0.2",
+    "jquery": "^3.6.0"
+  }
+}
