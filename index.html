@@ -7,32 +7,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ImageRight</title>
 </head>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
-    integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
-    crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
-    integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
-    crossorigin="anonymous"></script>
+<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
 
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="d-flex">
-                <div class="col-4">
-                    <div style="background-color: blue;">
-                        <div height: 100%;>aaaa</div>
-                    </div>
+    <div class="header bg-secondary" style=" height: auto;">
+
+        <nav class="navbar navbar-light bg-secondary d-flex justify-content-between">
+            <div class="d-flex mx-2">
+                <a class="navbar-brand" href="#">
+                    <img src="asset/logo.JPG" height="70px" class="d-inline-block align-text-bottom">
+                    <span class=" text-light fs-2 mx-1">咪咪貓貓</span>
+                </a>
+            </div>
+            <div class="d-flex m-1 align-items-end">
+                <form class="d-flex mx-3">
+                    <input class="form-control me-2 " type="search" placeholder="Search">
+                    <button class="btn btn-outline-light" type="submit">Search</button>
+                </form>
+                <div class="m-1 bg-info">
+                    <button type="button" class="p-3 text-light fs-4 btn btn-info">登入</button>
                 </div>
-                <div class="col-8">
-                    <div style="background-color: red;">
-                        <div height: 100%;>aaaa</div>
-                    </div>
+                <div class="m-1 bg-info">
+                    <button type="button" class="p-3 text-light fs-4 btn btn-info">註冊</button>
+                </div>
+
+            </div>
+        </nav>
+
+    </div>
+    <div class="container-fluid bg-dark" style="height: auto;">
+        <div class="d-flex">
+
+            <div class="collapse" id="navbarToggleExternalContent">
+                <div class="bg-dark p-4">
+                    <h5 class="text-white h4">Collapsed content</h5>
+                    <span class="text-muted">Toggleable via the navbar brand.</span>
                 </div>
             </div>
+            <nav class="navbar navbar-dark bg-dark">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarToggleExternalContent">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+            </nav>
+
+            <div class="col-2 bg-danger">aa</div>
+            <div class="col-10 bg-info">bbb</div>
         </div>
+
+    </div>
+    <div class="footer bg-secondary" style=" height: auto;">
+
     </div>
 
     <!-- <div id="app">
@@ -52,5 +80,41 @@
     // Registering and mounting our app
     App.mount('#app');
 </script>
+
+<style>
+    /* 公共樣式 */
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-size: 12px;
+    }
+
+    a {
+        text-decoration: none;
+        /* 取消文字修飾 */
+    }
+
+    article,
+    section,
+    aside,
+    address,
+    nav,
+    header,
+    footer,
+    img {
+        display: block;
+    }
+
+    img {
+        border: none;
+    }
+
+    li {
+        list-style: none;
+    }
+</style>
 
 </html>
