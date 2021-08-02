@@ -7,32 +7,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ImageRight</title>
 </head>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
-    integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
-    crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
-    integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
-    crossorigin="anonymous"></script>
+<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
 
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="d-flex">
-                <div class="col-4">
-                    <div style="background-color: blue;">
-                        <div height: 100%;>aaaa</div>
-                    </div>
+    <div class="header bg-secondary" style=" height: auto;">
+        <div class="d-flex justify-content-between">
+            <div class="d-flex align-items-end">
+                <img src="asset/logo.JPG" class="rounded m-2" style="width: 80px;">
+                <h3 class=" text-light">咪咪貓貓</h3>
+            </div>
+            <div class="d-flex m-1">
+                <div class="m-2 bg-info">
+                    <button type="button" class="p-3 text-light fs-4 btn btn-info">登入</button>
                 </div>
-                <div class="col-8">
-                    <div style="background-color: red;">
-                        <div height: 100%;>aaaa</div>
-                    </div>
+                <div class="m-2 bg-info">
+                    <button type="button" class="p-3 text-light fs-4 btn btn-info">註冊</button>
                 </div>
             </div>
         </div>
+
+    </div>
+    <div class="container-fluid bg-dark" style="height: auto;">
+        <div class="d-flex">
+
+            <div class="col-2 bg-danger">aa</div>
+            <div class="col-10 bg-info">bbb</div>
+        </div>
+
+    </div>
+    <div class="footer bg-secondary" style=" height: auto;">
+
     </div>
 
     <!-- <div id="app">
@@ -52,5 +57,41 @@
     // Registering and mounting our app
     App.mount('#app');
 </script>
+
+<style>
+    /* 公共樣式 */
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-size: 12px;
+    }
+
+    a {
+        text-decoration: none;
+        /* 取消文字修飾 */
+    }
+
+    article,
+    section,
+    aside,
+    address,
+    nav,
+    header,
+    footer,
+    img {
+        display: block;
+    }
+
+    img {
+        border: none;
+    }
+
+    li {
+        list-style: none;
+    }
+</style>
 
 </html>
