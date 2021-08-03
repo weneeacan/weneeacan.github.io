@@ -6,79 +6,96 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ImageRight</title>
+
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/js/bootstrap.min.js">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+
+    <script src="node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
 </head>
-<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-<link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
 
 <body>
-    <div class="header bg-secondary" style=" height: auto;">
+    <div class="wrapper h-100">
 
-        <nav class="navbar navbar-light bg-secondary d-flex justify-content-between">
-            <div class="d-flex mx-2">
-                <a class="navbar-brand" href="#">
-                    <img src="asset/logo.JPG" height="70px" class="d-inline-block align-text-bottom">
-                    <span class=" text-light fs-2 mx-1">咪咪貓貓</span>
-                </a>
-            </div>
-            <div class="d-flex m-1 align-items-end">
-                <form class="d-flex mx-3">
-                    <input class="form-control me-2 " type="search" placeholder="Search">
-                    <button class="btn btn-outline-light" type="submit">Search</button>
-                </form>
-                <div class="m-1 bg-info">
-                    <button type="button" class="p-3 text-light fs-4 btn btn-info">登入</button>
+
+        <div class="header bg-secondary" style=" height: auto;">
+
+            <nav class="navbar navbar-light bg-secondary d-flex justify-content-between">
+                <div class="d-flex mx-2">
+                    <a class="navbar-brand" href="#">
+                        <img src="asset/logo.JPG" height="70px" class="d-inline-block align-text-bottom">
+                        <span class=" text-light fs-2 mx-1">咪咪貓貓</span>
+                    </a>
                 </div>
-                <div class="m-1 bg-info">
-                    <button type="button" class="p-3 text-light fs-4 btn btn-info">註冊</button>
-                </div>
+                <div class="d-flex m-1 align-items-end">
+                    <form class="d-flex mx-3">
+                        <input class="form-control me-2 " type="search" placeholder="Search">
+                        <button class="btn btn-outline-light" type="submit">Search</button>
+                    </form>
+                    <div class="m-1 bg-info">
+                        <button type="button" class="p-3 text-light fs-4 btn btn-info">登入</button>
+                    </div>
+                    <div class="m-1 bg-info">
+                        <button type="button" class="p-3 text-light fs-4 btn btn-info">註冊</button>
+                    </div>
 
-            </div>
-        </nav>
-
-    </div>
-    <div class="container-fluid bg-dark" style="height: auto;">
-        <div class="d-flex">
-
-            <div class="collapse" id="navbarToggleExternalContent">
-                <div class="bg-dark p-4">
-                    <h5 class="text-white h4">Collapsed content</h5>
-                    <span class="text-muted">Toggleable via the navbar brand.</span>
-                </div>
-            </div>
-            <nav class="navbar navbar-dark bg-dark">
-                <div class="container-fluid">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarToggleExternalContent">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
                 </div>
             </nav>
 
-            <div class="col-2 bg-danger">aa</div>
-            <div class="col-10 bg-info">bbb</div>
         </div>
 
-    </div>
-    <div class="footer bg-secondary" style=" height: auto;">
+        <!-- <div class="content bg-dark" style="height: auto;"> -->
 
-    </div>
 
-    <!-- <div id="app">
-    </div> -->
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="/asset/Carousel/C1.jpg" class="d-block w-100">
+                </div>
+                <div class="carousel-item">
+                    <img src="/asset/Carousel/C2.jpg" class="d-block w-100">
+                </div>
+                <div class="carousel-item">
+                    <img src="/asset/Carousel/C3.jpg" class="d-block w-100">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
 
+        <!-- </div> -->
+        <!-- 頁尾 -->
+        <div class="footer bg-secondary">
+            <section class=" p-4">
+                <div class="container-fluid d-flex justify-content-center">
+                    <div class="me-3 fs-4">@ Copyright 2021 weneeacan</div>
+                    <div>
+                        <a href="https://github.com/weneeacan" class="me-1 fs-4">GitHub</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- 回到最頂 -->
+        <!-- 問題:創造出箭頭後，總是會有一條白色的區塊在最下方 -->
+        <div class="toTop">
+            <a href="#"><img src="asset/toTop.png" class="h-100">
+                <!-- <p class="text-light">BackTop</p> -->
+            </a>
+        </div>
 </body>
 <script src="https://unpkg.com/vue@next"></script>
 <script>
-    const App = Vue.createApp({
-        data() {
-            return {
-                firstName: 'Christopher',
-                lastName: 'Harrison'
-            };
-        }
-    });
-    // Registering and mounting our app
-    App.mount('#app');
 </script>
 
 <style>
@@ -114,6 +131,20 @@
 
     li {
         list-style: none;
+    }
+
+    .footer {
+        position: static;
+        bottom: 0px;
+        height: 80px;
+    }
+
+    .toTop {
+        width: 50px;
+        height: 50px;
+        position: sticky;
+        bottom: 5%;
+        left: 95%;
     }
 </style>
 
