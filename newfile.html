@@ -6,9 +6,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .imgPreview {
+            display: none;
+            top: 0;
+            left: 0;
+            width: 100%;
+            /*容器佔滿整個螢幕*/
+            height: 100%;
+            position: fixed;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        #imgPreview {
+            z-index: 100;
+            height: 90%;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/js/bootstrap.min.js">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+
+    <script src="node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
 </head>
-<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-<link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+
 
 <body>
     <div class="header bg-secondary" style=" height: auto;">
@@ -67,11 +94,50 @@
         <div class="border border-dark"><img src="asset/testImage.png" height="200px"></div>
         <div class="border border-dark"><img src="asset/testImage.png" height="200px"></div>
         <div class="border border-dark"><img src="asset/testImage.png" height="200px"></div>
-        <div class="border border-dark"><img src="asset/testImage.png" height="200px"></div>
-        <div class="border border-dark"><img src="asset/testImage.png" height="200px"></div>
+        <div class="border border-dark"><img type="button" data-bs-toggle="modal" data-bs-target="#pictureModal"
+                data-bs-whatever="asset/testImage.png" src="asset/testImage.png" height="200px"></div>
+        <div class="border border-dark"><img src="asset/testImage.png" height="200px" class="img"></div>
+        <div class="border border-dark"><img type="button" data-bs-toggle="modal" data-bs-target="#pictureModal"
+                data-bs-whatever="asset/logo.JPG" src="asset/logo.JPG" height="200px"></div>
+        <div class="border border-dark"><img src="asset/logo.JPG" height="200px" class="img"></div>
+    </div>
+    <div class="modal fade" id="pictureModal" tabindex="-1" aria-labelledby="pictureModalLabel" aria-hidden="true">
+        <div class="d-flex modal-dialog  modal-xl modal-dialog-centered modal-dialog-scrollable h-90 w-90">
+            <div class="modal-content flex-grow-1 justify-content-center">
+                <div class="modal-body flex-grow-1 justify-content-center">
+
+                </div>
+            </div>
+        </div>
     </div>
 
-
+    <div class="imgPreview">
+        <div class="bg-white bordor bordor-dark">
+            <img src="#" alt="" id="imgPreview">
+        </div>
+    </div>
 </body>
+
+<script>
+    var pictureModal = document.getElementById('pictureModal')
+    pictureModal.addEventListener('show.bs.modal', function (event) {
+        var button = event.relatedTarget
+        var recipient = button.getAttribute('data-bs-whatever')
+        var modalBodyInput = pictureModal.querySelector('.modal-body')
+        modalBodyInput.innerHTML = '<img src="' + recipient + '" class="figure-img rounded">'
+    })
+</script>
+<script>
+    $(function () {
+        $('.img').on('click', function () {
+            var src = $(this).attr('src');
+            $('#imgPreview').attr('src', src);
+            $('.imgPreview').show()
+        });
+        $('.imgPreview').on('click', function () {
+            $('.imgPreview').hide()
+        });
+    })
+</script>
 
 </html>
