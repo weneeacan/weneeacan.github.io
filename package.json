@@ -22,8 +22,11 @@
     "popper.js": "^1.16.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.15.0",
+    "@babel/preset-env": "^7.15.0",
     "babel-cli": "^6.26.0",
     "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.2.2",
     "babel-preset-env": "^1.7.0",
     "css-loader": "^6.2.0",
     "eslint": "^7.32.0",

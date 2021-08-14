@@ -9,7 +9,7 @@ module.exports = {
         filename: 'index.bundle.js',
         // path:存放位置
         // eslint-disable-next-line no-undef
-        path: path.resolve(__dirname, './'),
+        path: path.resolve(__dirname, 'dist'),
     },
     module: {
         rules: [
